@@ -1,7 +1,5 @@
 package wrappers;
 
-import java.util.List;
-
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;

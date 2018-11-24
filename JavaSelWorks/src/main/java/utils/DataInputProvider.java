@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -18,7 +19,7 @@ public class DataInputProvider {
 	public static int rowCount = 0;
 	public static int colCount = 0;
 
-	static String[][] data = null;
+	static Object[][] data = null;
 
 	public static Object[][] fetchData(String sheetName, String constraint){
 
@@ -39,9 +40,16 @@ public class DataInputProvider {
 			{
 				row = sh.getRow(i);
 				for(int j=0;j<colCount;j++) {
-					String cellVal = "";
-					cellVal = row.getCell(j).getStringCellValue();
-					data[i-1][j]=cellVal;
+					CellType ct = row.getCell(j).getCellType();
+					if(ct.toString().equalsIgnoreCase("STRING")) {
+						String cellValS = row.getCell(j).getStringCellValue();
+						data[i-1][j]=cellValS;
+					}else if(ct.toString().equalsIgnoreCase("NUMERIC")) {
+						String cellValN = ""+(int) row.getCell(j).getNumericCellValue();;
+						data[i-1][j]=cellValN;
+					}
+					
+					
 				}
 			}
 
