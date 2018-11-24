@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="31957" started-at="2018-11-11T15:34:45Z" finished-at="2018-11-11T15:35:17Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="31957" started-at="2018-11-11T15:34:45Z" finished-at="2018-11-11T15:35:17Z">
+      <class name="testcases.TC_One">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testcases.TC_One@271053e1]" name="beforeSuite" is-config="true" duration-ms="825" started-at="2018-11-11T15:34:45Z" finished-at="2018-11-11T15:34:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testcases.TC_One@271053e1]" name="beforeClass" is-config="true" duration-ms="0" started-at="2018-11-11T15:34:45Z" finished-at="2018-11-11T15:34:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:testcases.TC_One@271053e1]" name="beforeTest" is-config="true" duration-ms="17559" started-at="2018-11-11T15:34:45Z" finished-at="2018-11-11T15:35:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="LaunchPage()[pri:0, instance:testcases.TC_One@271053e1]" name="LaunchPage" duration-ms="13301" started-at="2018-11-11T15:35:03Z" finished-at="2018-11-11T15:35:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchPage -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:testcases.TC_One@271053e1]" name="afterTest" is-config="true" duration-ms="1059" started-at="2018-11-11T15:35:16Z" finished-at="2018-11-11T15:35:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:testcases.TC_One@271053e1]" name="afterSuite" is-config="true" duration-ms="602" started-at="2018-11-11T15:35:17Z" finished-at="2018-11-11T15:35:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- testcases.TC_One -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
