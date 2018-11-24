@@ -32,6 +32,12 @@ public class HomePage extends ProjectWrapper{
 	@FindBy(how=How.XPATH, using="//*[@id='primary-menu']/li[6]/a/span/span")
 	private WebElement BlogsButton;
 	
+	@FindBy(how=How.XPATH, using="//*[@id='page']/div[1]/header/nav/div/div/form/a")
+	private WebElement searchButton;
+	
+	@FindBy(how=How.XPATH, using="//*[@id='page']/div[1]/header/nav/div/div/form/div/input")
+	private WebElement searchArea;
+	
 	
 	//Page's methods
 	public HomePage clickHomeButton() {
@@ -42,6 +48,16 @@ public class HomePage extends ProjectWrapper{
 	public BlogsPage launchBlogPage() {
 		clickElement(BlogsButton);
 		return new BlogsPage(driver, test);
+	}
+	
+	public HomePage clickSearchButton() {
+		clickElement(searchButton);
+		return this;
+	}
+	
+	public HomePage enterSearchInput(String input) {
+		enterText(searchArea, input);
+		return this;
 	}
 
 }

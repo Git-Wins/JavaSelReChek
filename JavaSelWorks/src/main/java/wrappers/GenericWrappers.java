@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.NoSuchElementException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -48,9 +49,9 @@ public class GenericWrappers extends Reporter implements Wrappers{
 			}else if(browser.equalsIgnoreCase("firefox")) {
 				driver = new FirefoxDriver();
 			}
-			
-			driver.manage().window().maximize();
+			driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 			driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+			driver.manage().window().maximize();
 			driver.get(appUrl);
 			
 			primWdwHndle = driver.getWindowHandle();
@@ -63,8 +64,15 @@ public class GenericWrappers extends Reporter implements Wrappers{
 	}
 
 	public void enterText(WebElement element, String data) {
-		
-		
+		try {
+			element.clear();
+			element.sendKeys(data);
+			reportStep("The data: "+data+" entered successfully in field", "PASS");
+		} catch (NoSuchElementException e) {
+			reportStep("The data: "+data+" could not be entered in the field", "FAIL");
+		} catch (Exception e) {
+			reportStep("Unknown exception occured while entering "+data+" in the field", "FAIL");
+		}
 	}
 
 	public void getText(WebElement element) {

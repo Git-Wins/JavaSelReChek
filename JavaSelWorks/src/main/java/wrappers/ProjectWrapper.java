@@ -1,13 +1,20 @@
 package wrappers;
 
+import java.util.List;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.DataProvider;
+
+import utils.DataInputProvider;
 
 public class ProjectWrapper extends GenericWrappers{
 
 	public String browserName;
+	public String sheetName;
+	public String constraint;
 	
 	@BeforeSuite
 	public void beforeSuite() {
@@ -33,9 +40,10 @@ public class ProjectWrapper extends GenericWrappers{
 		endResult();
 	}
 	
-	/*@DataProvider(name="fetchData")
+	@DataProvider(name="fetch")
 	public Object[][] getData(){
-		return DataInputProvider.getSheet(dataSheetName);		
-	}*/
+		Object[][] dataFetched = DataInputProvider.fetchData(sheetName, constraint);
+		return dataFetched;		
+	}
 
 }

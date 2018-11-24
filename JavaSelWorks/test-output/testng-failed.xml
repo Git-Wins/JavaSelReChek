@@ -5,10 +5,10 @@
     <classes>
       <class name="testcases.TC_One">
         <methods>
+          <include name="LaunchPage" invocation-numbers="2"/>
           <include name="afterSuite"/>
           <include name="beforeTest"/>
           <include name="afterTest"/>
-          <include name="f"/>
           <include name="beforeSuite"/>
           <include name="beforeClass"/>
         </methods>
