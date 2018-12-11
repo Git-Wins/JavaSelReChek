@@ -1,40 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20701" started-at="2018-11-24T20:20:47Z" finished-at="2018-11-24T20:21:08Z">
+  <suite name="Default suite" duration-ms="52761" started-at="2018-12-11T18:10:23Z" finished-at="2018-12-11T18:11:15Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="20701" started-at="2018-11-24T20:20:47Z" finished-at="2018-11-24T20:21:08Z">
+    <test name="Default test" duration-ms="52761" started-at="2018-12-11T18:10:23Z" finished-at="2018-12-11T18:11:15Z">
       <class name="testcases.TC_One">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testcases.TC_One@42dafa95]" name="beforeSuite" is-config="true" duration-ms="921" started-at="2018-11-24T20:20:46Z" finished-at="2018-11-24T20:20:47Z">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testcases.TC_One@402a079c]" name="beforeSuite" is-config="true" duration-ms="1704" started-at="2018-12-11T18:10:21Z" finished-at="2018-12-11T18:10:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testcases.TC_One@42dafa95]" name="beforeClass" is-config="true" duration-ms="1" started-at="2018-11-24T20:20:47Z" finished-at="2018-11-24T20:20:47Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testcases.TC_One@402a079c]" name="beforeClass" is-config="true" duration-ms="0" started-at="2018-12-11T18:10:23Z" finished-at="2018-12-11T18:10:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:testcases.TC_One@42dafa95]" name="beforeTest" is-config="true" duration-ms="14070" started-at="2018-11-24T20:20:48Z" finished-at="2018-11-24T20:21:02Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:testcases.TC_One@402a079c]" name="beforeTest" is-config="true" duration-ms="25836" started-at="2018-12-11T18:10:24Z" finished-at="2018-12-11T18:10:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="LaunchPage(java.lang.String)[pri:0, instance:testcases.TC_One@42dafa95]" name="LaunchPage" duration-ms="4670" started-at="2018-11-24T20:21:02Z" data-provider="fetch" finished-at="2018-11-24T20:21:07Z">
+        <test-method status="PASS" signature="LaunchPage(java.lang.String)[pri:0, instance:testcases.TC_One@402a079c]" name="LaunchPage" duration-ms="6626" started-at="2018-12-11T18:10:50Z" data-provider="fetchItMan" finished-at="2018-12-11T18:10:57Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Vijay]]>
+                <![CDATA[Winston]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LaunchPage -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:testcases.TC_One@42dafa95]" name="afterTest" is-config="true" duration-ms="921" started-at="2018-11-24T20:21:07Z" finished-at="2018-11-24T20:21:08Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:testcases.TC_One@402a079c]" name="afterTest" is-config="true" duration-ms="1123" started-at="2018-12-11T18:10:57Z" finished-at="2018-12-11T18:10:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:testcases.TC_One@42dafa95]" name="afterSuite" is-config="true" duration-ms="547" started-at="2018-11-24T20:21:08Z" finished-at="2018-11-24T20:21:08Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:testcases.TC_One@402a079c]" name="beforeTest" is-config="true" duration-ms="12583" started-at="2018-12-11T18:10:58Z" finished-at="2018-12-11T18:11:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="LaunchPage(java.lang.String)[pri:0, instance:testcases.TC_One@402a079c]" name="LaunchPage" duration-ms="4111" started-at="2018-12-11T18:11:10Z" data-provider="fetchItMan" finished-at="2018-12-11T18:11:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Eureka]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchPage -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:testcases.TC_One@402a079c]" name="afterTest" is-config="true" duration-ms="900" started-at="2018-12-11T18:11:14Z" finished-at="2018-12-11T18:11:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:testcases.TC_One@402a079c]" name="afterSuite" is-config="true" duration-ms="977" started-at="2018-12-11T18:11:16Z" finished-at="2018-12-11T18:11:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

@@ -17,12 +17,13 @@ public class TC_One extends ProjectWrapper{
 		testDescription = "Just launching the page";
 		category = "Smoke";
 		authors = "Winston A";
-		sheetName = "searchValues1";
-		constraint = "No";
+		//sheetName = "searchValues1";
+		sheetName = "Sheet1";
+		//constraint = "Yes";
 	  
   }
   
-  @Test (dataProvider = "fetch")
+  @Test (dataProvider = "fetchItMan")
   public void LaunchPage(String searchVal) throws NullPointerException{
 	  
 	  new HomePage(driver, test)

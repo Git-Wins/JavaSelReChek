@@ -8,6 +8,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.NoSuchElementException;
 import java.util.Properties;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
@@ -47,6 +48,7 @@ public class GenericWrappers extends Reporter implements Wrappers{
 				System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 				driver = new ChromeDriver();
 			}else if(browser.equalsIgnoreCase("firefox")) {
+				//set property for Firefox driver
 				driver = new FirefoxDriver();
 			}
 			driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
@@ -75,9 +77,18 @@ public class GenericWrappers extends Reporter implements Wrappers{
 		}
 	}
 
-	public void getText(WebElement element) {
-		// TODO Auto-generated method stub
-		
+	public String getText(WebElement element) {
+		String returnTxt="";
+		try {
+			returnTxt = element.getText();
+			reportStep("The text fetched successfully from the field", "PASS");
+			return returnTxt;
+		} catch (NoSuchElementException e) {
+			reportStep("Exception occured while fetching text from the field", "FAIL");
+		} catch (Exception e) {
+			reportStep("Unknown exception occured while fetching text from the field", "FAIL");
+		}
+		return returnTxt;
 	}
 
 	public void clickElement(WebElement element) {
@@ -108,12 +119,30 @@ public class GenericWrappers extends Reporter implements Wrappers{
 	}
 
 	public void switchToParent() {
-		// TODO Auto-generated method stub
+		
+		try {
+			driver.switchTo().window(primWdwHndle);
+			reportStep("Switched successfully to the Home Page", "PASS");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
 	}
 
-	public void switchToWindow(String value) {
-		// TODO Auto-generated method stub
+	public void switchToWindow(String windowTitle) {
+		try {
+			Set<String> allOpenedWindows = driver.getWindowHandles();
+			for(String wHndle : allOpenedWindows) {
+				driver.switchTo().window(wHndle);
+				if(driver.getTitle().contains(windowTitle)) {
+					System.out.println("Switched to the target window with title: "+windowTitle);
+					break;
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			reportStep("The window could not be switched to the target window", "FAIL");
+		}
 		
 	}
 

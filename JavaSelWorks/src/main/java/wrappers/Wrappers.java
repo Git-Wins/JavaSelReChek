@@ -8,7 +8,7 @@ public interface Wrappers {
 	
 	public void enterText(WebElement element, String data);
 	
-	public void getText(WebElement element);
+	public String getText(WebElement element);
 	
 	public void clickElement(WebElement element);
 	
@@ -16,7 +16,7 @@ public interface Wrappers {
 	
 	public void switchToParent();
 	
-	public void switchToWindow(String value);
+	public void switchToWindow(String windowTitle);
 	
 	public void quitApp();
 	
