@@ -23,7 +23,7 @@ public class TC_One extends ProjectWrapper{
 	  
   }
   
-  @Test (dataProvider = "fetchItMan")
+  @Test (dataProvider = "fetchItDude")
   public void LaunchPage(String searchVal) throws NullPointerException{
 	  
 	  new HomePage(driver, test)

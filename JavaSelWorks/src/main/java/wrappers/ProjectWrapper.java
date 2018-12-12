@@ -6,8 +6,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 
-import utils.DataInputProvider;
-import utils.DataInputProviderConstraint;
+//import utils.DataInputProvider;
+//import utils.DataInputProviderConstraint;
+import utils.DataInputProviderFillo;
 
 public class ProjectWrapper extends GenericWrappers{
 
@@ -39,7 +40,7 @@ public class ProjectWrapper extends GenericWrappers{
 		endResult();
 	}
 	
-	@DataProvider(name="fetch")
+	/*@DataProvider(name="fetch")
 	public Object[][] getData(){
 		Object[][] dataFetched = DataInputProvider.fetchData(sheetName, constraint);
 		return dataFetched;		
@@ -48,6 +49,12 @@ public class ProjectWrapper extends GenericWrappers{
 	@DataProvider(name="fetchItMan")
 	public Object[][] getExcelData(){
 		Object[][] excelDataFetched = DataInputProviderConstraint.fetchExcelData(sheetName);
+		return excelDataFetched;		
+	}*/
+	
+	@DataProvider(name="fetchItDude")
+	public Object[][] getExcelData(){
+		Object[][] excelDataFetched = DataInputProviderFillo.fetchExcelData(sheetName);
 		return excelDataFetched;		
 	}
 

@@ -15,7 +15,7 @@ public class SampleThree {
 
 	public static void main(String[] args) throws EncryptedDocumentException, IOException {
 		
-		Workbook workbook = WorkbookFactory.create(new File("./src/main/resources/TryOne.xlsx"));
+		/*Workbook workbook = WorkbookFactory.create(new File("./src/main/resources/TryOne.xlsx"));
 
 		Sheet sheet = workbook.getSheetAt(0);
 
@@ -29,12 +29,12 @@ public class SampleThree {
             	count++;
             }
         	
-        	/*for(Cell cell: row) {
+        	for(Cell cell: row) {
                 String cellValue = dataFormatter.formatCellValue(cell);
                 System.out.print(cellValue + "\t");
-            }*/
+            }
             System.out.println();
-        }
+        }*/
 
 
 	}
